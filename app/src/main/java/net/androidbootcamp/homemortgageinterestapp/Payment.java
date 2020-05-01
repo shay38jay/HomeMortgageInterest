@@ -22,12 +22,12 @@ public class Payment extends AppCompatActivity {
         TextView monthlyPayment = (TextView)findViewById(R.id.txtPaymentMonthly);
         ImageView image = (ImageView)findViewById(R.id.imgYears);
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        int intLoan = sharedPref.getInt("key1",0);
+        float intLoan = sharedPref.getFloat("key1",0);
         int intYears = sharedPref.getInt("key2",0);
         int intPrincipal = sharedPref.getInt("key3", 0);
-        double totalInterest;
+        float totalInterest;
 
-        totalInterest =  (intLoan * intYears) - intPrincipal;
+        totalInterest =  (intLoan * intYears * 12) - intPrincipal;
         DecimalFormat currency = new DecimalFormat("###,###.##");
         monthlyPayment.setText("Total Interest Paid " + currency.format(totalInterest));
         if(intYears == 10){

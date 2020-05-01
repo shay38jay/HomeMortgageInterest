@@ -10,9 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.nio.DoubleBuffer;
+
 public class MainActivity extends AppCompatActivity {
 
-    int intLoan;
+    float intLoan;
     int intYears;
     int intPrincipal;
 
@@ -31,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
         compute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intLoan = Integer.parseInt(loan.getText().toString());
+                intLoan = Float.parseFloat(loan.getText().toString());
                 intYears = Integer.parseInt(years.getText().toString());
                 intPrincipal = Integer.parseInt(principal.getText().toString());
                 SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putInt("key1", intLoan);
+                editor.putFloat("key1", intLoan);
                 editor.putInt("key2", intYears);
                 editor.putInt("key3", intPrincipal);
                 editor.commit();
