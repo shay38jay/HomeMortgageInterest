@@ -21,12 +21,13 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/txtYears"
+        android:id="@+id/txtMonthlyPayment"
         android:layout_below="@+id/txtTitle"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="25sp"
-        android:hint="@string/hint2"/>
+        android:hint="@string/hint2"
+        android:autofillHints="" />
 
     <EditText
 
@@ -34,20 +35,21 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/txtLoan"
-        android:layout_below="@+id/txtYears"
+        android:id="@+id/txtYears"
+        android:layout_below="@+id/txtMonthlyPayment"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="25sp"
-        android:hint="@string/hint1"/>
+        android:hint="@string/hint1"
+        android:autofillHints="" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/txtInterest"
-        android:layout_below="@+id/txtLoan"
+        android:id="@+id/txtPrincipal"
+        android:layout_below="@+id/txtYears"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:textSize="25sp"
@@ -60,7 +62,7 @@
         android:layout_width="wrap_content"
         android:text="@string/btnCompute"
         android:id="@+id/btnCompute"
-        android:layout_below="@+id/txtInterest"
+        android:layout_below="@+id/txtPrincipal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
         android:textSize="35sp"/>

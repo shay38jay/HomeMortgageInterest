@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        final EditText loan = (EditText)findViewById(R.id.txtLoan);
+        final EditText loan = (EditText)findViewById(R.id.txtMonthlyPayment);
         final EditText years = (EditText)findViewById(R.id.txtYears);
-        final EditText principal = (EditText)findViewById(R.id.txtInterest);
+        final EditText principal = (EditText)findViewById(R.id.txtPrincipal);
         Button compute = (Button)findViewById(R.id.btnCompute);
         final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 

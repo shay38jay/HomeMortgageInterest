@@ -32,14 +32,11 @@ public class Payment extends AppCompatActivity {
         monthlyPayment.setText("Total Interest Paid " + currency.format(totalInterest));
         if(intYears == 10){
             image.setImageResource(R.drawable.ten);
-        }
-        else if (intYears == 20){
+        }else if (intYears == 20){
             image.setImageResource(R.drawable.twenty);
-        }
-        else if (intYears == 30){
+        }else if (intYears == 30){
             image.setImageResource(R.drawable.thirty);
-        }
-        else{
+        }else{
             monthlyPayment.setText("Enter 10, 20, or 30 years");
         }
     }
